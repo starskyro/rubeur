@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}RUB/EUR Exchange Rate{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+</style>
+
+<div class="example-wrapper">
+    {% if error!=true %}
+
+    <h1>RUB/EUR Exchange Rate: {{ exchangeRate }}</h1>
+
+    Source: {{ source }}
+
+    {% else %}
+
+    <h1>No valid source</h1>
+
+    {% endif %}
+</div>
+{% endblock %}

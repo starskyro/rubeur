@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entity add{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    {% if success %}
+        <h1>{{ name }} added!</h1>
+    {% else %}
+        <h1>{{ name }} exists!</h1>
+    {% endif %}
+    <ul>
+        <li>Id is {{ id ?? 'not assigned' }}</li>
+        <li>Address is {{ address }}</li>
+    </ul>
+</div>
+{% endblock %}
